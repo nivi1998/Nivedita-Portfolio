@@ -24,7 +24,7 @@ const projects = [
     description: "A practical React application that analyzes resumes against job descriptions, calculates a match score and identifies relevant skills using AI API integration.",
     tags: ["React", "Node.js", "AI API", "Express"],
     github: "https://github.com/nivi1998/ResumeAnalyzer-use-AI-API-Frontend-backend",
-    demo: "#"
+    demo: "https://resume-analyzer-use-ai-api-frontend.vercel.app/"
   },
   {
     title: "E-commerce Platform",
@@ -34,10 +34,10 @@ const projects = [
     demo: "#"
   },
   {
-    title: "Task Management App",
-    description: "A clean task-management interface demonstrating component architecture, reusable patterns, state handling and responsive design.",
-    tags: ["React", "Context API", "Local Storage"],
-    github: GITHUB,
+    title: "Facebook Close Friends List",
+    description: "Created a lightweight React-based tool to simplify the organization of close-friend lists, with an interactive interface for viewing and managing selected contacts. Focused on clean component structure, smooth user interactions, and a simple, responsive experience.",
+    tags: ["React.js", "JavaScript", "HTML5", "CSS3", "Component-Based Architecture"],
+    github: "https://github.com/nivi1998/fbclosefriendlist/tree/master",
     demo: "#"
   }
 ];
@@ -48,7 +48,9 @@ const experiences = [
     company: "Tata Consultancy Services",
     period: "02/2023 - Present",
     points: [
-      "Modernized a legacy Salesforce-based application by rebuilding it using React, improving application performance and scalability and reducing page load time by ~30%.",
+      "Modernized a legacy Salesforce-based healthcare application by rebuilding key modules using React, improving application performance and scalability and reducing page load time by approximately 15% to 20%.",
+      "Developed responsive and reusable UI components for a hospital-focused pharmacy application to manage drug information, medication data, and related healthcare content",
+      "Developed an affiliate-specific drug information and educational video platform, delivering localized medication content and drug-related videos in different languages based on regional business requirements.",
       "Built responsive, reusable UI components using React, JavaScript (ES6+), HTML5, and CSS3.",
       "Integrated frontend with Node.js REST APIs to enable secure and efficient data flow.",
       "Supported data validation and database interactions using DBeaver with relational databases.",
@@ -63,7 +65,9 @@ const experiences = [
     company: "TMotion Global LTD",
     period: "04/2022 - 11/2022",
     points: [
-      "Built responsive web applications using React, JavaScript, HTML5, and CSS3, focusing on performance, usability, and cross-browser compatibility with a strong foundation in component-based and scalable frontend design."
+      "Developed a role-based cricket and sports event management platform with Admin, Brand, and Guest access levels, enabling organizations to create and manage events, teams, tickets, and guest invitations based on assigned user permissions.",
+      "Developed scalable, responsive React.js applications with reusable component architecture, implementing role-based access and permission-driven workflows while ensuring consistent performance, usability, and cross-browser compatibility.",
+      "Designed and delivered user-centric frontend solutions using React.js, JavaScript (ES6+), HTML5, and CSS3, focusing on maintainable architecture, responsive UI, performance optimization, and seamless user experience."
     ]
   },
   {
@@ -71,10 +75,10 @@ const experiences = [
     company: "Applied Cloud Computing",
     period: "10/2021 - 03/2022, Mumbai, India",
     points: [
-      "Software application designing, building, and maintaining UI design.",
-      "Developed frontend features for a ticketing/support management tool used by Bajaj Finserv and Angel One applications.",
-      "Built responsive UI components using React, JavaScript (ES6+), HTML5, and CSS positioning, integrating APIs.",
-      "Translated Figma designs into responsive UI components."
+      "Developed a Jira-like ticketing Tool and support management application with workflow-based ticket tracking across stages such as Blocked, In Progress, Testing, and Completed, using React.js and reusable UI components.",
+      "Contributed to Angel One's learning portal, building responsive and user-friendly interfaces from Figma designs using React.js, JavaScript (ES6+), HTML5, and CSS, with a focus on responsive design and cross-browser compatibility.",
+      "Developed frontend features for Bajaj Finserv applications, creating responsive UI components and integrating REST APIs to deliver scalable and interactive user experiences.",
+      "Translated Figma designs into reusable, pixel-accurate React components, ensuring consistency across screens, devices, and application workflows."
     ]
   },
   {
@@ -82,15 +86,15 @@ const experiences = [
     company: "CodeDrill Infotch",
     period: "04/2021 - 09/2021",
     points: [
-      "Collaborated on system design and scalable architecture decisions.",
-      "Wrote SQL queries for data validation."
+      "Work on the frontend development of a modern employee attendance management application, replacing traditional manual sign-in/sign-out processes with a responsive digital workflow for efficient attendance tracking.",
+      "Designed and developed the frontend architecture, reusable React.js/Next.js components, responsive UI, and user workflows, integrating Node.js APIs and MongoDB to deliver reliable attendance data management and a seamless user experience."
     ]
   }
 ];
 
 function App() {
   const [open, setOpen] = React.useState(false);
-  const nav = ["about", "skills", "projects", "experience", "contact"];
+  const nav = ["about", "skills", "experience", "projects", "contact"];
 
   const handleEmailClick = async (event) => {
     event.preventDefault();
@@ -129,10 +133,13 @@ function App() {
         <section className="hero section" id="home">
           <div className="hero-copy">
             <span className="eyebrow">Frontend Developer</span>
-            <h1>Building <span>clean, scalable</span> web experiences.</h1>
+              <h1> Turning <span>complex requirements into</span> simple, scalable experiences.</h1>
+            {/* <h1>Building <span>clean, scalable</span> web experiences.</h1> */}
             <p className="lead">
               I'm Nivedita Kumari, a Frontend Developer with 5+ years of experience
-              building responsive, user-focused applications with React and modern web technologies.
+              turning product ideas into responsive, high-performance, user-focused applications with React and modern web technologies.
+              {/* I'm Nivedita Kumari, a Frontend Developer with 5+ years of experience
+              building responsive, user-focused applications with React and modern web technologies. */}
             </p>
             <div className="hero-actions">
               <a className="btn primary" href="#projects">View Projects <ArrowUpRight size={17}/></a>
@@ -165,8 +172,11 @@ function App() {
           <div className="section-heading"><span>01</span><div><p className="eyebrow">About me</p><h2>Turning ideas into useful interfaces.</h2></div></div>
           <div className="about-grid">
             <div>
-              <p>I'm a Frontend Developer focused on creating responsive, maintainable and accessible web applications. My core strength is building reusable React components and connecting polished interfaces with APIs and application state.</p>
-              <p>I enjoy solving real product problems, improving user experience and collaborating across design, backend and product teams.</p>
+            <p>I'm a Frontend Developer focused on creating <b>responsive, accessible, and high-performing web applications.</b> My core strength lies in transforming complex product requirements into clear, intuitive digital experiences through scalable UI architecture, performance optimization, and seamless API integration.</p> 
+            <p>I bring a <b> product-focused approach to frontend engineering,</b> taking ownership from design handoff through production and collaborating with cross-functional teams to deliver reliable solutions that create meaningful user and business value.</p>
+
+              {/* <p>I'm a Frontend Developer focused on creating responsive, maintainable and accessible web applications. My core strength is building reusable React components and connecting polished interfaces with APIs and application state.</p>
+              <p>I enjoy solving real product problems, improving user experience and collaborating across design, backend and product teams.</p> */}
             </div>
             <div className="quote-card"><Layers3/><blockquote>“Good interfaces make complex things feel simple.”</blockquote><small>— My approach to frontend development</small></div>
           </div>
@@ -179,21 +189,8 @@ function App() {
           </div>
         </section>
 
-        <section className="section" id="projects">
-          <div className="section-heading"><span>03</span><div><p className="eyebrow">Featured work</p><h2>Projects that show how I build.</h2></div></div>
-          <div className="project-grid">
-            {projects.map((p, i) => <article className="project-card" key={p.title}>
-              <div className={`project-icon icon-${i}`}><Layers3 size={22}/></div>
-              <div className="project-top"><span>0{i+1}</span><a href={p.github} target="_blank" rel="noreferrer" aria-label={`${p.title} GitHub`}><Github size={19}/></a></div>
-              <h3>{p.title}</h3><p>{p.description}</p>
-              <div className="tags">{p.tags.map(t => <span key={t}>{t}</span>)}</div>
-              <div className="card-links"><a href={p.demo}>Live demo <ExternalLink size={15}/></a><a href={p.github} target="_blank" rel="noreferrer">GitHub <Github size={15}/></a></div>
-            </article>)}
-          </div>
-        </section>
-
         <section className="section soft" id="experience">
-          <div className="section-heading"><span>04</span><div><p className="eyebrow">Experience</p><h2>Career journey.</h2></div></div>
+          <div className="section-heading"><span>03</span><div><p className="eyebrow">Experience</p><h2>Career journey.</h2></div></div>
           <div className="timeline">
             {experiences.map((job) => (
               <div className="experience" key={`${job.company}-${job.role}`}>
@@ -212,6 +209,39 @@ function App() {
           </div>
         </section>
 
+        <section className="section" id="projects">
+          <div className="section-heading"><span>04</span><div><p className="eyebrow">Featured work</p><h2>Projects that show how I build.</h2></div></div>
+          <div className="project-grid">
+            {projects.map((p, i) => <article className="project-card" key={p.title}>
+              <div className={`project-icon icon-${i}`}><Layers3 size={22}/></div>
+              <div className="project-top"><span>0{i+1}</span><a href={p.github} target="_blank" rel="noreferrer" aria-label={`${p.title} GitHub`}><Github size={19}/></a></div>
+              <h3>{p.title}</h3><p>{p.description}</p>
+              <div className="tags">{p.tags.map(t => <span key={t}>{t}</span>)}</div>
+              <div className="card-links"><a href={p.demo} target="_blank" rel="noreferrer">Live demo <ExternalLink size={15}/></a><a href={p.github} target="_blank" rel="noreferrer">GitHub <Github size={15}/></a></div>
+            </article>)}
+          </div>
+        </section>
+
+        {/* <section className="section soft" id="experience">
+          <div className="section-heading"><span>04</span><div><p className="eyebrow">Experience</p><h2>Career journey.</h2></div></div>
+          <div className="timeline">
+            {experiences.map((job) => (
+              <div className="experience" key={`${job.company}-${job.role}`}>
+                <div className="experience-head">
+                  <div>
+                    <h3>{job.role}</h3>
+                    <strong>{job.company}</strong>
+                  </div>
+                  <span>{job.period}</span>
+                </div>
+                <ul>
+                  {job.points.map((point) => <li key={point}>{point}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section> */}
+
         <section className="resume-banner">
           <div><p className="eyebrow">Resume</p><h2>Want the full picture?</h2><p>Download my latest resume for detailed experience, skills and projects.</p></div>
           <a className="btn light" href="/Nivedita-Kumari-Resume.pdf" download>Download Resume <Download size={17}/></a>
@@ -222,7 +252,7 @@ function App() {
           <div className="contact-grid">
             <div><p>I'm open to frontend opportunities and conversations around React, UI engineering and modern web applications.</p>
               <div className="contact-items">
-                <a href={EMAIL_LINK} onClick={handleEmailClick}><Mail/> <span>Email<br/><b>{EMAIL}</b></span></a>
+                <a href={EMAIL_LINK} onClick={handleEmailClick} target="_blank" rel="noreferrer"><Mail/> <span>Email<br/><b>{EMAIL}</b></span></a>
                 <a href={LINKEDIN} target="_blank" rel="noreferrer"><Linkedin/> <span>LinkedIn<br/><b>View profile</b></span></a>
                 <a href={GITHUB} target="_blank" rel="noreferrer"><Github/> <span>GitHub<br/><b>@nivi1998</b></span></a>
                 <div><MapPin/> <span>Location<br/><b>India</b></span></div>
